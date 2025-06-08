@@ -12,16 +12,31 @@ app.get('/', (req, res)=>{
     res.send('Assignment 2: Lachlan Anderson - 113780241');
 })
 
-app.get('/solutions/projects', (req, res)=>{
-    projectData.getAllProjects().then(res.send(data)).catch((err)=>{ res.send(err); });
+app.get('/solutions/projects', async (req, res)=>{
+    try {
+        let data = await projectData.getAllProjects();
+        res.send(data);
+    } catch(err) {
+        res.send(err);
+    }
 })
 
-app.get('/solutions/projects/id-demo', (req, res)=>{
-    projectData.getProjectById(9).then(res.send(data)).catch((err)=>{ res.send(err); });
+app.get('/solutions/projects/id-demo', async (req, res)=>{
+    try {
+        let data = await projectData.getProjectById(9);
+        res.send(data);
+    } catch(err) { 
+        res.send(err);
+    }
 })
 
-app.get('/solutions/projects/sector-demo', (req, res)=>{
-    projectData.getProjectBySector("    agriculTUre  \n    ").then(res.send(data)).catch((err)=>{ res.send(err); });
+app.get('/solutions/projects/sector-demo', async (req, res)=>{
+    try {
+        let data = await projectData.getProjectsBySector("    agriculTUre    ");
+        res.send(data);
+    } catch(err) {
+        res.send(err);
+    }
 })
 
 // starting the server after data initialization has completed
