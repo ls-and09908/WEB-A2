@@ -1,3 +1,15 @@
+/********************************************************************************
+*  WEB322 – Assignment 02
+* 
+*  I declare that this assignment is my own work in accordance with Seneca's
+*  Academic Integrity Policy:
+* 
+*  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+* 
+*  Name: Lachlan Anderson Student ID: 113780241 Date: June 07 2025
+*
+********************************************************************************/
+
 const path = require('path');
 const express=require('express');
 const app=express();
