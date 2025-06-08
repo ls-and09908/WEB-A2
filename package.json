@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "daisyui": "^5.0.43",
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "tw:build": "tailwindcss build -i ./public/css/tailwind.css -o ./public/css/main.css",
+    "start": "node server.js"
+  },
+  "name": "server.js",
+  "version": "1.0.0",
+  "description": "WEB322 Assignment 2",
+  "main": "server.js",
+  "author": "Lachlan Anderson",
+  "license": "ISC"
+}
